@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Logo from '../components/logo'
 import { RiTwitterFill, RiGithubFill, RiRedditFill, RiYoutubeFill, RiDiscordFill } from 'react-icons/ri'
 
 const SocialIcon = (props) => {
@@ -24,7 +25,7 @@ export default function Home() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center max-w-6xl mx-auto py-12 px-6">
-        <img src="/logo.png" className="w-24 h-auto mb-2" />
+        <Logo className="mb-2 h-24 w-24" />
         <h1 className="font-bold text-4xl mb-2">Contributorcoin</h1>
         <p className="mb-6">An open-source cryptocurrency by and for contributors</p>
         <div className="flex gap-6 flex-wrap items-center justify-center mb-12">
