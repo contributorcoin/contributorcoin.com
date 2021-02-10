@@ -4,7 +4,7 @@ import { RiTwitterFill, RiGithubFill, RiRedditFill, RiYoutubeFill, RiDiscordFill
 const SocialIcon = (props) => {
     const { link, title, icon } = props
     return (
-      <a href={link} target="_blank" rel="noopener noreferrer" className="block text-6xl flex-shrink p-4 border-4 border-solid border-transparent rounded-full transition duration-300 hover:border-purple-lt">
+      <a href={link} target="_blank" rel="noopener noreferrer" className="block text-6xl flex-shrink p-2 border-4 border-solid border-transparent rounded-full transition duration-300 hover:border-purple-lt">
         {icon && icon}
         <span className="sr-only">{title}</span>
       </a>
@@ -27,7 +27,7 @@ export default function Home() {
         <img src="/logo.png" className="w-24 h-auto mb-2" />
         <h1 className="font-bold text-4xl mb-2">Contributorcoin</h1>
         <p className="mb-6">An open-source cryptocurrency by and for contributors</p>
-        <div className="flex gap-4 md:gap-6 flex-wrap items-center justify-center mb-12">
+        <div className="flex gap-6 flex-wrap items-center justify-center mb-12">
           <SocialIcon link="https://github.com/contributorcoin" title="GitHub" icon={<RiGithubFill />} />
           <SocialIcon link="https://twitter.com/contributorcoin" title="Twitter" icon={<RiTwitterFill />} />
           <SocialIcon link="https://www.reddit.com/r/Contributorcoin/" title="Reddit" icon={<RiRedditFill />} />
