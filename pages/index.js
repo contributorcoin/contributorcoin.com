@@ -1,64 +1,42 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { RiTwitterFill, RiGithubFill, RiRedditFill, RiYoutubeFill, RiDiscordFill } from 'react-icons/ri'
+
+const SocialIcon = (props) => {
+    const { link, title, icon } = props
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer" className="block text-6xl flex-shrink p-4 border-4 border-solid border-transparent rounded-full transition duration-300 hover:border-purple-lt">
+        {icon && icon}
+        <span className="sr-only">{title}</span>
+      </a>
+    )
+}
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="flex flex-col min-h-screen bg-purple-dk text-purple-lt">
       <Head>
-        <title>Create Next App</title>
+        <title>Contributorcoin | An open-source cryptocurrency by and for contributors</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <header>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      </header>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <main className="flex-1 flex flex-col items-center justify-center max-w-6xl mx-auto py-12 px-6">
+        <img src="/logo.png" className="w-24 h-auto mb-2" />
+        <h1 className="font-bold text-4xl mb-2">Contributorcoin</h1>
+        <p className="mb-6">An open-source cryptocurrency by and for contributors</p>
+        <div className="flex gap-4 md:gap-6 flex-wrap items-center justify-center mb-12">
+          <SocialIcon link="https://github.com/contributorcoin" title="GitHub" icon={<RiGithubFill />} />
+          <SocialIcon link="https://twitter.com/contributorcoin" title="Twitter" icon={<RiTwitterFill />} />
+          <SocialIcon link="https://www.reddit.com/r/Contributorcoin/" title="Reddit" icon={<RiRedditFill />} />
+          <SocialIcon link="https://discord.gg/2hca8ytYZv" title="Discord" icon={<RiDiscordFill />} />
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+      <footer>
+
       </footer>
     </div>
   )
